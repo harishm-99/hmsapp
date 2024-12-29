@@ -32,7 +32,8 @@ public class ReviewService {
                            Long propertyId,
                            User user
                            ){
-        Property property = propertyRepository.findById(propertyId).orElseThrow(() -> new ResourceNotFound("Property not found with ID: " + propertyId));
+        Property property = propertyRepository.findById(propertyId)
+                .orElseThrow(() -> new ResourceNotFound("Property not found with ID: " + propertyId));
         Reviews reviewStatus = reviewsRepository.findByPropertyAndUser(property, user);
 
         if (reviewStatus != null) {

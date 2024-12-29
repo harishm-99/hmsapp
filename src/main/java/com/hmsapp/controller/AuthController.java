@@ -30,7 +30,7 @@ public class AuthController {
          return new ResponseEntity<>(savedUserDto , HttpStatus.CREATED);
     }
 
-    //used for user signup
+    //used for property owner signup
     @PostMapping("/property/sign-up")
     public ResponseEntity<UserDto> createPropertyOwner(
             @RequestBody UserDto userDto
@@ -39,7 +39,7 @@ public class AuthController {
          return new ResponseEntity<>(savedUserDto , HttpStatus.CREATED);
     }
 
-    //used for user signup
+    //used for blogger sign-up
     @PostMapping("/blog/sign-up")
     public ResponseEntity<UserDto> createBlogManager(
             @RequestBody UserDto userDto
@@ -48,6 +48,7 @@ public class AuthController {
         return new ResponseEntity<>(savedUserDto , HttpStatus.CREATED);
     }
 
+    //common-login
     @PostMapping("/login")
     public ResponseEntity<?> login(
             @RequestBody LoginDto loginDto

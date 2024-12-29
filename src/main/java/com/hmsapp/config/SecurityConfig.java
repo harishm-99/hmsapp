@@ -34,7 +34,7 @@ public class SecurityConfig {
 //        http.authorizeHttpRequests().anyRequest().permitAll();
 
         http.authorizeHttpRequests()
-                // anyone accessing this url does nit require token. Not authenticated urls/ search urls i.e. hotel/bus searching
+                // anyone accessing this url does not require token. Not authenticated urls/ search urls i.e. hotel/bus searching
                 .requestMatchers("/api/auth/**",
                         "/api/v1/property/**",
                         "api/v1/city/**",
